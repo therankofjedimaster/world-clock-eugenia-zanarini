@@ -21,3 +21,7 @@ footer {
 h1 {
   text-align: center;
 }
+select {
+  display: block;
+  margin: 0px auto;
+}
