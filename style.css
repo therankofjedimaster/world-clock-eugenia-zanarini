@@ -1,0 +1,23 @@
+.container {
+  border: 2px solid black;
+  border-radius: 10px;
+  display: block;
+  margin: 40px auto;
+  max-width: 500px;
+  padding: 5px;
+}
+.github {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+footer {
+  line-height: 1.5;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
