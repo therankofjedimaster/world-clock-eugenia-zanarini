@@ -36,6 +36,9 @@ setInterval(updateTokyoTime, 1000);
 
 function updateCity(event) {
     let timezone = event.target.value;
+    if (timezone === "current") {
+        timezone = moment.tz.guess();
+    }
     let cityName = timezone.split("/")[1];
     let cityTime = moment().tz(timezone);
     let cities = document.querySelector("#cities");
