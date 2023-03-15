@@ -10,6 +10,18 @@ function updateLATime() {
 }
 setInterval(updateLATime, 1000);
 
+function updateRosarioTime() {
+    let rosario = document.querySelector("#rosario");
+    if (rosario) {
+        let rosarioHour = rosario.querySelector(".time");
+        let rosarioDay = rosario.querySelector(".date");
+        let rosarioTime = moment().tz("America/Rosario");
+        rosarioHour.innerHTML = rosarioTime.format("HH:MM:ss");
+        rosarioDay.innerHTML = rosarioTime.format("dddd, MMMM D, YYYY");
+    }
+}
+setInterval(updateRosarioTime, 1000);
+
 function updateDublinTime() {
     let dublin = document.querySelector("#dublin");
     if (dublin) {
@@ -21,6 +33,18 @@ function updateDublinTime() {
     }
 }
 setInterval(updateDublinTime, 1000);
+
+function updateIstanbulTime() {
+    let istanbul = document.querySelector("#istanbul");
+    if (istanbul) {
+        let istanbulHour = istanbul.querySelector(".time");
+        let istanbulDay = istanbul.querySelector(".date");
+        let istanbulTime = moment().tz("Asia/Istanbul");
+        istanbulHour.innerHTML = istanbulTime.format("HH:MM:ss");
+        istanbulDay.innerHTML = istanbulTime.format("dddd, MMMM D, YYYY");
+    }
+}
+setInterval(updateIstanbulTime, 1000);
 
 function updateTokyoTime() {
     let tokyo = document.querySelector("#tokyo");
@@ -39,7 +63,7 @@ function updateCity(event) {
     if (timezone === "current") {
         timezone = moment.tz.guess();
     }
-    let cityName = timezone.split("/")[1];
+    let cityName = timezone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(timezone);
     let cities = document.querySelector("#cities");
     cities.innerHTML = `<div class="city">
