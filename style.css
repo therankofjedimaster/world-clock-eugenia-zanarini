@@ -26,6 +26,14 @@
 .github:hover {
   color: rgb(157, 105, 157);
 }
+.homepage {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+.homepage:hover {
+  color: rgb(157, 105, 157);
+}
 .time {
   font-size: 44px;
   font-weight: bold;
