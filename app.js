@@ -77,8 +77,11 @@ function updateCity(event) {
             </div>
             <a class="homepage" href="index.html">Back to homepage</a>
     `;
+    setTimeout(() => {
+        updateCity(event)
+    }, 1000);
 }
-setInterval(updateCity, 1000);
+
 
 let timezoneChange = document.querySelector("#city");
 timezoneChange.addEventListener("change", updateCity);
